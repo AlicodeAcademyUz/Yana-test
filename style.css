@@ -3,3 +3,24 @@ input::placeholder {
   font-size: 8px;
   text-align: center;
 }
+
+button {
+  width: 400px;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  transition: 1s;
+}
+
+button:hover::before {
+  width: 100%;
+}

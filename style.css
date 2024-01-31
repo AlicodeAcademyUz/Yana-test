@@ -1,26 +1,83 @@
-input::placeholder {
-  color: red;
-  font-size: 8px;
-  text-align: center;
+@keyframes textAnim {
+  0% {
+    bottom: -80px;
+  }
+  30% {
+    bottom: 0;
+  }
+
+  60% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 80px;
+  }
 }
 
-button {
-  width: 400px;
-  border: 1px solid transparent;
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-40px);
+  }
+  45% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(-85px);
+  }
+  60% {
+    transform: translateY(-85px);
+  }
+  90% {
+    transform: translateY(-130px);
+  }
+  100% {
+    transform: translateY(-130px);
+  }
+}
+
+body {
+  background-color: #34495e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 30px;
+}
+
+p {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  overflow: hidden;
+  height: 35px;
   position: relative;
 }
 
-button::before {
-  content: "";
+.inner-text {
+  /* margin-left: 20px;
   position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  background-color: black;
-  width: 0;
-  transition: 1s;
+  bottom: -80px;
+  z-index: 9999; */
+  margin: 0;
 }
 
-button:hover::before {
-  width: 100%;
+/* .text-1 {
+  bottom: 0;
+  animation: textAnim1 5s linear 2s infinite alternate;
+}
+.text-2 {
+  animation: textAnim 5s linear 4s infinite alternate;
+}
+.text-3 {
+  animation: textAnim 5s linear 6s infinite alternate;
+} */
+
+.anim {
+  animation: anim 5s linear 0s infinite alternate;
 }
